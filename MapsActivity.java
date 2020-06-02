@@ -33,6 +33,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private EditText editText;
     private Marker marker;
     private String address;
+    private String feature;
     private String latitude;
     private String longitude;
 
@@ -101,6 +102,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 catch(IOException e){
                     e.printStackTrace();
                 }
+                feature = In_address;
                 //,를 기준으로 split.
                 String []splitstr = addressList.get(0).toString().split(",");
                 //split한 스트링에서 다시 주소만 분리.
@@ -138,6 +140,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 bundle.putString("address",address);
                 bundle.putString("latitude",latitude);
                 bundle.putString("longitude",longitude);
+                bundle.putString("feature",feature);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

@@ -27,9 +27,15 @@ public class List_storage extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        String make_us_whole = bundle.getString("address") + " " + bundle.getString("latitude") + ", " + bundle.getString("longitude");
+        //String make_us_whole = bundle.getString("address") + " " + bundle.getString("latitude") + ", " + bundle.getString("longitude");
+        String make_us_whole = bundle.getString("feature");
 
         items = new ArrayList<String>();
+        items.add("류경 호텔");
+        items.add("목멱 타워");
+        items.add("가천대학교");
+        items.add("한라산");
+        items.add("자갈치 시장");
         items.add(make_us_whole);
 
         Adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
