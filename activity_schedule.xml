@@ -55,15 +55,11 @@
                 />
         </LinearLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ListView
-                android:id="@+id/show_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </ScrollView>
+        <ListView
+             android:id="@+id/show_list"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:choiceMode="multipleChoice"/>
 
     </LinearLayout>
 

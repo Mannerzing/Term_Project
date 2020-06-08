@@ -1,6 +1,7 @@
 package com.example.schedule_1;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -27,7 +28,7 @@ public class ScheduleAdd extends AppCompatActivity {
         setContentView(R.layout.activity_schedule_add);
 
         Button repeat = findViewById(R.id.R_day_button);
-        Button add_list_button = findViewById(R.id.add_list_but);;
+        Button add_list_button = findViewById(R.id.add_list_but);
         Button back_button = findViewById(R.id.cancel_but);
         S_Time = findViewById(R.id.Start_timepick);
         E_Time = findViewById(R.id.End_timepick);
@@ -111,14 +112,6 @@ public class ScheduleAdd extends AppCompatActivity {
                         day_check++;
                         fri = 1;
                     }
-
-                    if(day_check == 5){
-                        day = "주중에만";
-                    }
-                    else if(day_check > 0){
-                        day += "에만";
-                    }
-
                     if((checker = R_bundle.getInt("day_of_6")) == 1){
                         day += "토 ";
                         end_check++;
@@ -130,15 +123,16 @@ public class ScheduleAdd extends AppCompatActivity {
                         sun = 1;
                     }
 
-                    if(end_check == 2){
-                        day = "주말에만";
-                    }
-                    else if(end_check > 0){
-                        day += "에만";
+                    if(day_check == 5 && end_check == 2){
+                        day = "매일";
                     }
 
-                    if(day_check == 5 && end_check == 2){
-                        day = "매일마다";
+                    else if(day_check == 5 && end_check==0){
+                        day = "주중";
+                    }
+
+                    else if(end_check == 2 && day_check==0){
+                        day = "주말";
                     }
 
                     days_view.setText(day);
