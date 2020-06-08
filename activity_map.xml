@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/layout_main"
+    android:id="@+id/layout_map"
     android:orientation="vertical"
     tools:context=".MapActivity">
 
@@ -14,7 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="505dp"
         android:layout_below="@+id/sv_location"
-
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
@@ -27,7 +26,7 @@
         android:layout_marginRight="17dp"
         android:layout_marginBottom="152dp"
         android:layout_weight="30"
-        tools:context=".MainActivity" />
+        tools:context=".MapActivity" />
 
     <SearchView
         android:id="@+id/sv_location"
@@ -47,8 +46,6 @@
         android:queryHint="검색하세요"
         tools:targetApi="lollipop" />
 
-
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -56,9 +53,21 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
+        android:layout_marginStart="303dp"
+        android:layout_marginLeft="303dp"
         android:layout_marginBottom="76dp"
-        android:text="장소검색" />
+        android:text="검색하기" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="303dp"
+        android:layout_marginBottom="76dp"
+        android:text="돌아가기" />
 
 </RelativeLayout>

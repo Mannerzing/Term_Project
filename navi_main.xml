@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:id="@+id/drawerView"
+    android:background="#5559b4">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5559b4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="반갑습니다"
+            android:textColor="#ffffff"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="94dp"
+            android:layout_marginTop="80dp"
+            android:text="이아람 님"
+            android:textColor="#ffffff"
+            android:textSize="26dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:text="오늘도 매너Zing과 함께, 매너 챙겨요"
+            android:textColor="#ffffff"
+            android:textSize="14dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="200dp"
+            android:background="#80ffffff"></LinearLayout>
+
+        <Button
+            android:id="@+id/manner_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="228dp"
+            android:onClick="OnClick"
+            android:text="매너리스트 추가"
+            android:background="#00ff0000"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="270dp"
+            android:background="#80ffffff"></LinearLayout>
+
+
+        <Button
+            android:id="@+id/manner_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="298dp"
+            android:onClick="OnClick"
+            android:text="매너리스트 삭제"
+            android:background="#00ff0000"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="340dp"
+            android:background="#80ffffff"></LinearLayout>
+
+
+        <Button
+            android:id="@+id/manner_sche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="368dp"
+            android:onClick="OnClick"
+            android:text="스케쥴"
+            android:background="#00ff0000"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="410dp"
+            android:background="#80ffffff"></LinearLayout>
+
+
+        <Button
+            android:id="@+id/manner_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="438dp"
+            android:onClick="OnClick"
+            android:text="진동모드 앱 선택"
+            android:background="#00ff0000"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="480dp"
+            android:background="#80ffffff"></LinearLayout>
+
+        <Button
+            android:id="@+id/manner_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="540dp"
+            android:onClick="OnClick"
+            android:text="로그아웃"
+            android:textColor="#ffffff"
+            android:background="#00ff0000"
+            android:textSize="15dp"></Button>
+    </RelativeLayout>
+
+</LinearLayout>

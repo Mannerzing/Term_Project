@@ -1,16 +1,5 @@
 package org.techtown.setgooglemaps;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import noman.googleplaces.NRPlaces;
-import noman.googleplaces.PlaceType;
-import noman.googleplaces.PlacesListener;
-import noman.googleplaces.Place;
-import noman.googleplaces.PlacesException;
-
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,6 +16,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -45,14 +40,17 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.techtown.setgooglemaps.MainActivity;
-import org.techtown.setgooglemaps.R;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+
+import noman.googleplaces.NRPlaces;
+import noman.googleplaces.Place;
+import noman.googleplaces.PlaceType;
+import noman.googleplaces.PlacesException;
+import noman.googleplaces.PlacesListener;
 
 
 public class MapActivity extends AppCompatActivity
@@ -148,11 +146,25 @@ public class MapActivity extends AppCompatActivity
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+
+
         setContentView(R.layout.activity_map);
 
 
         previous_marker = new ArrayList<Marker>();
 
+        // 돌아가기 버튼
+        Button back = (Button)findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MapActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // 검색하기 버튼
         Button button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,7 +175,7 @@ public class MapActivity extends AppCompatActivity
 
         searchView = findViewById(R.id.sv_location);
 
-        mLayout = findViewById(R.id.layout_main);
+        mLayout = findViewById(R.id.layout_map);
 
         locationRequest = new LocationRequest()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
