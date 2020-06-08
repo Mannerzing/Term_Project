@@ -1,4 +1,4 @@
-package com.example.schedule_1;
+package org.techtown.setgooglemaps;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,32 +27,32 @@ public class Schedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-       Button add = findViewById(R.id.btn_addList);
-       Button back = findViewById(R.id.btn_back_main);
-       Button delete = findViewById(R.id.btn_delList);
-       showlist = findViewById(R.id.show_list);
+        Button add = findViewById(R.id.btn_addList);
+        Button back = findViewById(R.id.btn_back_main);
+        Button delete = findViewById(R.id.btn_delList);
+        showlist = findViewById(R.id.show_list);
 
-       add.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent addList = new Intent(Schedule.this,ScheduleAdd.class);
-               startActivityForResult(addList, 44);
-           }
-       });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addList = new Intent(Schedule.this,ScheduleAdd.class);
+                startActivityForResult(addList, 44);
+            }
+        });
 
-       back.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               finish();
-           }
-       });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
-       delete.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-           }
-       });
+            }
+        });
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.schedule_1;
+package org.techtown.setgooglemaps;
 
 public class Schedule_item {
     String time;

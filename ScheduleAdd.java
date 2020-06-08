@@ -1,4 +1,4 @@
-package com.example.schedule_1;
+package org.techtown.setgooglemaps;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,7 +36,7 @@ public class ScheduleAdd extends AppCompatActivity {
         repeat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Repeatday = new Intent(ScheduleAdd.this,Dayrepeat.class);
+                Intent Repeatday = new Intent(ScheduleAdd.this, Dayrepeat.class);
                 startActivityForResult(Repeatday,999);
             }
         });
