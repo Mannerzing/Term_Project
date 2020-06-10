@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleAdd">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_but"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24dp"
+                android:fontFamily="@font/hoon"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="취소" />
+
+            <Button
+                android:id="@+id/add_list_but"
+                android:layout_marginLeft="185dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24dp"
+                android:fontFamily="@font/hoon"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="저장" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/hoon"
+                android:text="시작할 시간"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                />
+
+            <TimePicker
+                android:id="@+id/Start_timepick"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/hoon"
+                android:timePickerMode="spinner"
+                android:layout_marginLeft="80dp"
+                />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="종료할 시간"
+                android:fontFamily="@font/hoon"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                />
+
+            <TimePicker
+                android:id="@+id/End_timepick"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/hoon"
+                android:timePickerMode="spinner"
+                android:layout_marginLeft="80dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/R_day_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="요일 반복"
+                android:fontFamily="@font/hoon"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:id="@+id/S_days"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:fontFamily="@font/hoon"
+                android:textColor="#000000"
+                android:gravity="center|right"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

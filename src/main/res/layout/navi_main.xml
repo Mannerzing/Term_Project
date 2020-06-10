@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:id="@+id/drawerView"
+    android:background="@color/md_grey_500">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/hoon"
+            android:text="반갑습니다"
+            android:textColor="#ffffff"
+            android:textSize="18dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/hoon"
+            android:text="정은서 님"
+            android:textColor="#ffffff"
+            android:textSize="32dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/hoon"
+            android:text="오늘도 매너Zing과 함께, 매너 챙겨요"
+            android:textColor="#ffffff"
+            android:textSize="17dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="200dp"
+            android:background="#80ffffff"></LinearLayout>
+
+        <Button
+            android:id="@+id/manner_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="228dp"
+            android:background="#00ff0000"
+            android:gravity="center_horizontal"
+            android:onClick="OnClick"
+            android:text="매너리스트 추가"
+            android:textSize="20dp"
+            android:fontFamily="@font/hoon"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="270dp"
+            android:background="#80ffffff"></LinearLayout>
+
+
+        <Button
+            android:id="@+id/manner_del"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="298dp"
+            android:onClick="OnClick"
+            android:text="매너리스트 삭제"
+            android:textSize="20dp"
+            android:fontFamily="@font/hoon"
+            android:background="#00ff0000"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="340dp"
+            android:background="#80ffffff"></LinearLayout>
+
+
+        <Button
+            android:id="@+id/manner_sche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="368dp"
+            android:onClick="OnClick"
+            android:text="스케쥴"
+            android:textSize="20dp"
+            android:fontFamily="@font/hoon"
+            android:background="#00ff0000"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="410dp"
+            android:background="#80ffffff"></LinearLayout>
+
+
+        <Button
+            android:id="@+id/manner_choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="438dp"
+            android:onClick="OnClick"
+            android:text="진동모드 앱 선택"
+            android:textSize="20dp"
+            android:fontFamily="@font/hoon"
+            android:background="#00ff0000"
+            android:textColor="#ffffff"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="480dp"
+            android:background="#80ffffff"></LinearLayout>
+
+        <Button
+            android:id="@+id/manner_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="508dp"
+            android:background="#00ff0000"
+            android:gravity="center_horizontal"
+            android:onClick="OnClick"
+            android:text="로그인"
+            android:fontFamily="@font/hoon"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="550dp"
+            android:background="#80ffffff"></LinearLayout>
+
+        <Button
+            android:id="@+id/manner_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="578dp"
+            android:background="#00ff0000"
+            android:gravity="center_horizontal"
+            android:onClick="OnClick"
+            android:text="로그아웃"
+            android:fontFamily="@font/hoon"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></Button>
+    </RelativeLayout>
+
+</LinearLayout>
