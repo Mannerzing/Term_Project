@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "868945353249",
+    "firebase_url": "https://mannerzing-d362e.firebaseio.com",
+    "project_id": "mannerzing-d362e",
+    "storage_bucket": "mannerzing-d362e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868945353249:android:5666d3991cb59f2aa0e160",
+        "android_client_info": {
+          "package_name": "org.techtown.setgooglemaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868945353249-dn8akh1m73nd8fj77hvcomj3ad2a7e97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.techtown.setgooglemaps",
+            "certificate_hash": "c70b82ab5cec6faf97d535c3a36f66fac7fa463c"
+          }
+        },
+        {
+          "client_id": "868945353249-ug994nufc9dkk91nueo2b3gjjiltunkp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFbdyJ22j0Xo8nFvDxB-7blMdvE4H_8qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868945353249-ug994nufc9dkk91nueo2b3gjjiltunkp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
