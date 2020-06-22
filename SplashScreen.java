@@ -10,6 +10,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import org.techtown.setgooglemaps.R;
+
+
 public class SplashScreen extends Activity {
     public void onAttacherToWindow(){
         super.onAttachedToWindow();
