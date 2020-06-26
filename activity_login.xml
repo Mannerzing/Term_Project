@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFC880"
+    >
 
 
     <TextView
@@ -26,7 +28,9 @@
         android:text="LOGIN"
         android:gravity="center"
         android:fontFamily="@font/hoon"
-        android:textSize="55sp" />
+        android:textSize="55sp"
+        android:textColor="#ffffff"
+        />
 
     <TextView
 
@@ -44,8 +48,10 @@
         android:layout_marginRight="10dp"
         android:fontFamily="@font/hoon"
         android:gravity="center"
-        android:text="고객님, \n로그인 하시겠습니까"
-        android:textSize="30dp" />
+        android:text="고객님, \n로그인 해주십시요"
+        android:textSize="28dp"
+        android:textColor="#ffffff"
+        />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/btn_google"

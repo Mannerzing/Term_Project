@@ -22,7 +22,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/hoon"
-                android:text="돌아가기" />
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="2dp"
+                android:text="돌아가기"
+                android:textColor="#ffffff"
+                android:background="@drawable/map_button"
+                />
 
             <Button
                 android:id="@+id/btn_addList"
@@ -30,6 +35,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/hoon"
+                android:background="@drawable/map_button"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="#ffffff"
                 android:text="추가하기" />
 
             <Button
@@ -38,6 +47,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/hoon"
+                android:background="@drawable/map_button"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:textColor="#ffffff"
                 android:text="제거하기" />
         </LinearLayout>
 
