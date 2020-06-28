@@ -14,6 +14,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hoon"
+                android:text="저장된 리스트"
+                android:textColor="#000000"
+                android:textSize="24dp"
+
+                />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/show_list"
+            android:layout_width="match_parent"
+            android:layout_height="650dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -54,32 +76,6 @@
                 android:textColor="#ffffff"
                 android:text="제거하기" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="저장된 리스트"
-                android:fontFamily="@font/hoon"
-                android:textColor="#000000"
-                android:textSize="24dp"
-
-                />
-        </LinearLayout>
-
-
-
-
-            <ListView
-                android:id="@+id/show_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
 
     </LinearLayout>
