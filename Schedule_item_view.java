@@ -1,4 +1,4 @@
-package com.example.schedule_1;
+package org.techtown.setgooglemaps;
 
 import android.content.Context;
 import android.util.AttributeSet;

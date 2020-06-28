@@ -1,7 +1,6 @@
-package com.example.schedule_1;
+package org.techtown.setgooglemaps;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -28,8 +27,9 @@ public class ScheduleAdd extends AppCompatActivity {
         setContentView(R.layout.activity_schedule_add);
 
         Button repeat = findViewById(R.id.R_day_button);
-        Button add_list_button = findViewById(R.id.add_list_but);
+        Button add_list_button = findViewById(R.id.add_list_but);;
         Button back_button = findViewById(R.id.cancel_but);
+
         S_Time = findViewById(R.id.Start_timepick);
         E_Time = findViewById(R.id.End_timepick);
         days_view = findViewById(R.id.S_days);
@@ -37,7 +37,7 @@ public class ScheduleAdd extends AppCompatActivity {
         repeat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Repeatday = new Intent(ScheduleAdd.this,Dayrepeat.class);
+                Intent Repeatday = new Intent(ScheduleAdd.this, Dayrepeat.class);
                 startActivityForResult(Repeatday,999);
             }
         });
@@ -45,7 +45,10 @@ public class ScheduleAdd extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent addList = new Intent(ScheduleAdd.this,Schedule.class);
+                startActivity(addList);
+
+                overridePendingTransition(R.anim.slide_left2, R.anim.slide_left);
             }
         });
 
@@ -69,6 +72,7 @@ public class ScheduleAdd extends AppCompatActivity {
 
                 add.putExtras(container);
                 setResult(54,add);
+
                 finish();
             }
         });

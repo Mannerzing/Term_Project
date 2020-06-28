@@ -36,36 +36,42 @@
                 android:id="@+id/C_mon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/hoon"
                 android:text="월요일마다" />
 
             <CheckBox
                 android:id="@+id/C_tue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/hoon"
                 android:text="화요일마다" />
 
             <CheckBox
                 android:id="@+id/C_wen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/hoon"
                 android:text="수요일마다" />
 
             <CheckBox
                 android:id="@+id/C_thu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/hoon"
                 android:text="목요일마다" />
 
             <CheckBox
                 android:id="@+id/C_fri"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/hoon"
                 android:text="금요일마다" />
 
             <CheckBox
                 android:id="@+id/C_sat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/hoon"
                 android:text="토요일마다"
                 android:textColor="#ff0000ff" />
 
@@ -74,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="일요일마다"
+                android:fontFamily="@font/hoon"
                 android:textColor="#ffff0000" />
         </LinearLayout>
 

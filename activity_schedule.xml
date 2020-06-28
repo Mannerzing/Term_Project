@@ -21,6 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/hoon"
                 android:text="돌아가기" />
 
             <Button
@@ -28,6 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/hoon"
                 android:text="추가하기" />
 
             <Button
@@ -35,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/hoon"
                 android:text="제거하기" />
         </LinearLayout>
 
@@ -49,17 +52,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="저장된 리스트"
+                android:fontFamily="@font/hoon"
                 android:textColor="#000000"
                 android:textSize="24dp"
 
                 />
         </LinearLayout>
 
-        <ListView
-             android:id="@+id/show_list"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:choiceMode="multipleChoice"/>
+
+
+
+            <ListView
+                android:id="@+id/show_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
 
     </LinearLayout>
 

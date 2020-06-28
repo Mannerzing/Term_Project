@@ -15,8 +15,7 @@
             android:id="@+id/top_layer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/cancel_but"
@@ -24,6 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="24dp"
+                android:fontFamily="@font/hoon"
                 style="?android:attr/borderlessButtonStyle"
                 android:text="취소" />
 
@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="24dp"
+                android:fontFamily="@font/hoon"
                 style="?android:attr/borderlessButtonStyle"
                 android:text="저장" />
 
@@ -50,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/hoon"
                 android:text="시작할 시간"
                 android:textSize="20dp"
                 android:textColor="#000000"
@@ -61,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="3"
+                android:fontFamily="@font/hoon"
                 android:timePickerMode="spinner"
                 android:layout_marginLeft="80dp"
                 />
@@ -71,6 +74,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="종료할 시간"
+                android:fontFamily="@font/hoon"
                 android:textSize="20dp"
                 android:textColor="#000000"
                 android:gravity="center"
@@ -81,6 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="3"
+                android:fontFamily="@font/hoon"
                 android:timePickerMode="spinner"
                 android:layout_marginLeft="80dp"
                 />
@@ -90,8 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            >
+            android:layout_marginTop="20dp">
 
             <Button
                 android:id="@+id/R_day_button"
@@ -101,6 +105,7 @@
                 android:layout_weight="1"
                 android:gravity="center|left"
                 android:text="요일 반복"
+                android:fontFamily="@font/hoon"
                 android:textSize="18dp"
                 />
             <TextView
@@ -109,9 +114,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:textSize="18dp"
-                android:textColor="#CC3D3D"
-                android:gravity="center|left"
+                android:fontFamily="@font/hoon"
+                android:textColor="#000000"
+                android:gravity="center|right"
                 />
+
 
         </LinearLayout>
     </LinearLayout>

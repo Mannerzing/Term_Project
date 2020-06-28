@@ -1,4 +1,4 @@
-package com.example.schedule_1;
+package org.techtown.setgooglemaps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
