@@ -40,6 +40,7 @@ public class Schedule extends AppCompatActivity {
         adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,schedule_list);
 
         showlist.setAdapter(adapter);
+        showlist.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
 
 
