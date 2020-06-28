@@ -22,6 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="뒤로가기"
+                android:fontFamily="@font/nanumbold"
                 style="?android:attr/borderlessButtonStyle"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -36,42 +37,48 @@
                 android:id="@+id/C_mon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
+                android:textSize="20sp"
                 android:text="월요일마다" />
 
             <CheckBox
                 android:id="@+id/C_tue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
+                android:textSize="20sp"
                 android:text="화요일마다" />
 
             <CheckBox
                 android:id="@+id/C_wen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
+                android:textSize="20sp"
                 android:text="수요일마다" />
 
             <CheckBox
                 android:id="@+id/C_thu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
+                android:textSize="20sp"
                 android:text="목요일마다" />
 
             <CheckBox
                 android:id="@+id/C_fri"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
+                android:textSize="20sp"
                 android:text="금요일마다" />
 
             <CheckBox
                 android:id="@+id/C_sat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
+                android:textSize="20sp"
                 android:text="토요일마다"
                 android:textColor="#ff0000ff" />
 
@@ -79,8 +86,9 @@
                 android:id="@+id/C_sun"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbold"
+                android:textSize="20sp"
                 android:text="일요일마다"
-                android:fontFamily="@font/hoon"
                 android:textColor="#ffff0000" />
         </LinearLayout>
 

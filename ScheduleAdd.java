@@ -72,6 +72,7 @@ public class ScheduleAdd extends AppCompatActivity {
 
                 add.putExtras(container);
                 setResult(54,add);
+
                 finish();
             }
         });

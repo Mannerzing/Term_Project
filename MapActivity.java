@@ -40,6 +40,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,15 +57,25 @@ import noman.googleplaces.PlacesListener;
 
 
 public class MapActivity extends AppCompatActivity
-        implements OnMapReadyCallback {
-
+        implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
+    LatLng latlng1;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
     private GoogleMap mMap;
+    private final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1001;
 
-
+    public String myUid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+
+        Bundle extras= getIntent().getExtras();
+        myUid=extras.getString("UID");
+
+        Toast.makeText(getApplicationContext(),myUid,Toast.LENGTH_SHORT).show();
+
+        permissionCheck();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -83,23 +95,41 @@ public class MapActivity extends AppCompatActivity
 
 
     }
+    public void permissionCheck() {
+        int permssionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
+        if (permssionCheck != PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(this, "권한 승인이 필요합니다", Toast.LENGTH_LONG).show();
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                Toast.makeText(this, "위치 정보 사용을 위해 ACCESS_FINE_LOCATION 권한이 필요합니다.", Toast.LENGTH_LONG).show();
+            } else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+                Toast.makeText(this, "위치 정보 사용을 위해 ACCESS_FINE_LOCATION 권한이 필요합니다.", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
 
     public void onMapSearch(View view) {
+        String addressString=null;
         EditText locationSearch = (EditText) findViewById(R.id.editText);
         String location = locationSearch.getText().toString();
         List<Address> addressList = null;
 
 
         if (location != null || !location.equals("")) {
-            Geocoder geocoder = new Geocoder(this);
+            Geocoder geocoder = new Geocoder(this,Locale.KOREAN);
             try {
                 addressList = geocoder.getFromLocationName(location, 1);
+                if(addressList.size()>0){
+                    addressString=addressList.get(0).toString();
+                }
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            System.out.println(addressString);
             Address address = addressList.get(0);
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+            latlng1=latLng;
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         }
@@ -108,13 +138,38 @@ public class MapActivity extends AppCompatActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(27.746974, 85.301582);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Kathmandu, Nepal"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Add a marker in Seoul and move the camera
+        LatLng seoul = new LatLng(37.494870,126.960763);
+        mMap.addMarker(new MarkerOptions().position(seoul).title("Korea, Seoul"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
+        mMap.setOnMarkerClickListener(this);
         mMap.setMyLocationEnabled(true);
     }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
+    { switch (requestCode) {
+        case MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "승인이 허가되어 있습니다.", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "승인을 받아주세요.", Toast.LENGTH_LONG).show();
+            }
+            return;
+        }
+    }
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        EditText locationSearch = (EditText) findViewById(R.id.editText);
+        String location = locationSearch.getText().toString();
+        databaseReference.child(myUid).child("장소").child(location).push().setValue(latlng1);
+        Toast.makeText(this,marker.getTitle()+"\n"+marker.getPosition(),Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+
 }

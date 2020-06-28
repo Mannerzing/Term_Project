@@ -16,7 +16,7 @@ tools:context=".ListDel">
     android:layout_marginStart="30dp"
     android:layout_marginLeft="303dp"
     android:layout_marginBottom="76dp"
-    android:fontFamily="@font/hoon"
+    android:fontFamily="@font/nanumbold"
     android:text="돌아가기" />
 
 

@@ -13,11 +13,23 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class Schedule extends AppCompatActivity {
 
+
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+
+    public String myUid;
+
     ListView showlist;
+
+    int index=0;
 
     String convert_time;
     String container_day;
@@ -89,6 +101,7 @@ public class Schedule extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         Bundle cartridge = data.getExtras();
 
+        index++;
 
         if(requestCode == 44){
             if(resultCode == 54){
@@ -99,6 +112,35 @@ public class Schedule extends AppCompatActivity {
                     e_hour = cartridge.getInt("end_hour");
                     e_min = cartridge.getInt("end_min");
                     convert_time = s_hour + ":" + s_min + " ~ " + e_hour + ":" + e_min + " 반복:" +container_day ;
+
+
+                    User user1=new User();
+                    user1.startHour=s_hour;
+                    user1.startMinute=s_min;
+                    user1.endHour=e_hour;
+                    user1.endMinute=e_min;
+
+
+                    if(container_day.contains("월")){
+                        user1.Mon=true;
+                    }if(container_day.contains("화")){
+                        user1.Tue=true;
+                    }if(container_day.contains("수")){
+                        user1.Wed=true;
+                    }if(container_day.contains("목")){
+                        user1.Thur=true;
+                    }if(container_day.contains("금")){
+                        user1.Fri=true;
+                    }if(container_day.contains("토")){
+                        user1.Sat=true;
+                    }if(container_day.contains("일")){
+                        user1.Sun=true;
+                    }
+
+
+
+                    myUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    databaseReference.child(myUid).child("시간").child(String.valueOf(index)+"번째 스케쥴").setValue(user1);
 
                     schedule_list.add(0,convert_time);
                     adapter.notifyDataSetChanged();

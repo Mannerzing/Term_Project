@@ -5,22 +5,26 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:id="@+id/drawerView"
-    android:background="@color/md_red_300">
+    android:background="@drawable/border">
 
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/md_red_300"
         android:orientation="horizontal">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/md_grey_400">
         <TextView
             android:id="@+id/hello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
-            android:fontFamily="@font/hoon"
+            android:fontFamily="@font/nanumbold"
             android:text="이용을 위해 \n로그인을 해주세요,"
             android:textColor="#ffffffff"
             android:textSize="30dp"></TextView>
@@ -31,7 +35,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:layout_marginTop="80dp"
-            android:fontFamily="@font/hoon"
+            android:fontFamily="@font/nanumbold"
             android:textColor="#ffffff"
             android:textSize="32dp"></TextView>
 
@@ -41,16 +45,24 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="130dp"
-            android:fontFamily="@font/hoon"
+            android:fontFamily="@font/nanumbold"
             android:text=""
             android:textColor="#ffffff"
             android:textSize="17dp"></TextView>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="200dp"
-            android:background="#80ffffff"></LinearLayout>
+            android:background="@color/md_black_1000"></LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="225dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pin"/>
 
         <Button
             android:id="@+id/manner_add"
@@ -58,39 +70,26 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="228dp"
             android:background="#00ff0000"
+            android:fontFamily="@font/nanumbold"
             android:gravity="center_horizontal"
             android:onClick="OnClick"
             android:text="장소 추가 / 삭제"
-            android:textSize="20dp"
-            android:fontFamily="@font/hoon"
-            android:textColor="#ffffff"></Button>
+            android:textColor="@color/md_black_1000"
+            android:textSize="20dp"></Button>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="270dp"
-            android:background="#80ffffff"></LinearLayout>
+            android:background="@color/md_black_1000"></LinearLayout>
 
 
-<!--        <Button-->
-<!--            android:id="@+id/manner_del"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center_horizontal"-->
-<!--            android:layout_marginTop="298dp"-->
-<!--            android:onClick="OnClick"-->
-<!--            android:text="매너리스트 삭제"-->
-<!--            android:textSize="20dp"-->
-<!--            android:fontFamily="@font/hoon"-->
-<!--            android:background="#00ff0000"-->
-<!--            android:textColor="#ffffff"></Button>-->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="340dp"
-            android:background="#80ffffff"></LinearLayout>
-
+        <ImageView
+        android:layout_marginTop="294dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/calendar"/>
 
         <Button
             android:id="@+id/manner_sche"
@@ -99,24 +98,24 @@
             android:gravity="center_horizontal"
             android:layout_marginTop="298dp"
             android:onClick="OnClick"
-            android:text="스케쥴"
+            android:text="스케쥴 관리"
             android:textSize="20dp"
-            android:fontFamily="@font/hoon"
+            android:fontFamily="@font/nanumbold"
             android:background="#00ff0000"
-            android:textColor="#ffffff"></Button>
+            android:textColor="@color/md_black_1000"></Button>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="410dp"
-            android:background="#80ffffff"></LinearLayout>
+            android:layout_marginTop="340dp"
+            android:background="@color/md_black_1000"></LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="480dp"
-            android:background="#80ffffff"></LinearLayout>
+        <ImageView
+            android:layout_marginTop="364dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/user"/>
 
         <Button
             android:id="@+id/manner_loginout"
@@ -127,28 +126,39 @@
             android:gravity="center_horizontal"
             android:onClick="OnClick"
             android:text="로그인"
-            android:fontFamily="@font/hoon"
-            android:textColor="#ffffff"
+            android:fontFamily="@font/nanumbold"
+            android:textColor="@color/md_black_1000"
             android:textSize="20dp"></Button>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="410dp"
+            android:background="@color/md_black_1000"></LinearLayout>
+
+
+        <Button
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:background="#00ff0000"
+            android:gravity="center_horizontal"
+            android:onClick="OnClick"
+            android:text="Copyright(C)2020.\n All rights reserved by"
+            android:fontFamily="@font/nanumbold"
+            android:textColor="@color/md_grey_600"
+            android:textSize="18dp"></Button>
+
+
 
 <!--        <LinearLayout-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="1dp"-->
-<!--            android:layout_marginTop="550dp"-->
-<!--            android:background="#80ffffff"></LinearLayout>-->
+<!--            android:layout_marginTop="480dp"-->
+<!--            android:background="@color/md_black_1000"></LinearLayout>-->
 
-<!--        <Button-->
-<!--            android:id="@+id/manner_logout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="508dp"-->
-<!--            android:background="#00ff0000"-->
-<!--            android:gravity="center_horizontal"-->
-<!--            android:onClick="OnClick"-->
-<!--            android:text="로그아웃"-->
-<!--            android:fontFamily="@font/hoon"-->
-<!--            android:textColor="#ffffff"-->
-<!--            android:textSize="20dp"></Button>-->
     </RelativeLayout>
 
 </LinearLayout>
