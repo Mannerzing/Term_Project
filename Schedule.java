@@ -21,15 +21,14 @@ import java.util.ArrayList;
 
 public class Schedule extends AppCompatActivity {
 
-
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
     public String myUid;
 
-    ListView showlist;
-
     int index=0;
+
+    ListView showlist;
 
     String convert_time;
     String container_day;
@@ -52,6 +51,7 @@ public class Schedule extends AppCompatActivity {
         adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,schedule_list);
 
         showlist.setAdapter(adapter);
+        showlist.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
 
 
@@ -113,7 +113,6 @@ public class Schedule extends AppCompatActivity {
                     e_min = cartridge.getInt("end_min");
                     convert_time = s_hour + ":" + s_min + " ~ " + e_hour + ":" + e_min + " 반복:" +container_day ;
 
-
                     User user1=new User();
                     user1.startHour=s_hour;
                     user1.startMinute=s_min;
@@ -138,9 +137,10 @@ public class Schedule extends AppCompatActivity {
                     }
 
 
-
                     myUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
                     databaseReference.child(myUid).child("시간").child(String.valueOf(index)+"번째 스케쥴").setValue(user1);
+
+
 
                     schedule_list.add(0,convert_time);
                     adapter.notifyDataSetChanged();
