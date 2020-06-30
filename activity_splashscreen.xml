@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center"
-    android:background="@color/md_red_300"
+    android:background="@color/md_grey_700"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -17,10 +17,7 @@
         android:textColor="#ffffffff"
         android:textStyle="bold"
         android:textSize="30dp"
-        android:fontFamily="@font/cooperbl"
-        android:textColorHighlight="@color/md_red_300"
-
-        />
+        android:fontFamily="@font/cooperbl"/>
 
     <ImageView
         android:id="@+id/splash"

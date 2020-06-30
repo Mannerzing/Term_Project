@@ -22,10 +22,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="20dp"
                 android:textSize="24dp"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="취소" />
+                android:text="취소"
+                android:background="@drawable/solid"/>
 
             <Button
                 android:id="@+id/add_list_but"
@@ -33,8 +35,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+
+                android:layout_marginTop="20dp"
                 android:textSize="24dp"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
+                android:background="@drawable/solid"
                 style="?android:attr/borderlessButtonStyle"
                 android:text="저장" />
 
@@ -51,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
                 android:text="시작할 시간"
                 android:textSize="20dp"
                 android:textColor="#000000"
@@ -63,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
                 android:timePickerMode="spinner"
                 android:layout_marginLeft="80dp"
                 />
@@ -74,7 +79,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="종료할 시간"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
                 android:textSize="20dp"
                 android:textColor="#000000"
                 android:gravity="center"
@@ -85,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:fontFamily="@font/hoon"
+                android:fontFamily="@font/nanumbold"
                 android:timePickerMode="spinner"
                 android:layout_marginLeft="80dp"
                 />
@@ -104,8 +109,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="요일 반복"
-                android:fontFamily="@font/hoon"
+                android:text="요일 반복:"
+                android:fontFamily="@font/nanumbold"
                 android:textSize="18dp"
                 />
             <TextView
@@ -116,8 +121,7 @@
                 android:textSize="18dp"
                 android:fontFamily="@font/hoon"
                 android:textColor="#000000"
-                android:gravity="center|right"
-                />
+                android:gravity="center|right"/>
 
 
         </LinearLayout>

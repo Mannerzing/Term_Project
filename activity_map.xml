@@ -14,7 +14,7 @@
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
+            android:layout_weight="6"
             android:hint="Search Location Here" />
 
 
@@ -22,19 +22,25 @@
             android:id="@+id/search_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:onClick="onMapSearch"
-            android:text="Search" />
+            android:text="검색하기"
+            android:fontFamily="@font/nanumbold"
+            android:background="@drawable/solid" />
+
         <Button
             android:id="@+id/back"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
+
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="303dp"
-            android:fontFamily="@font/hoon"
+            android:background="@drawable/solid"
+            android:fontFamily="@font/nanumbold"
             android:text="돌아가기" />
 
 
