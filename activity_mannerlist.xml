@@ -21,32 +21,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginTop="20dp"
                 android:background="@drawable/solid"
                 android:fontFamily="@font/nanumbold"
                 android:text="돌아가기" />
 
-            <Button
-                android:id="@+id/btn_addList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/nanumbold"
-                android:text="추가하기"
-                android:background="@drawable/solid"/>
 
-            <Button
-                android:id="@+id/btn_delList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/nanumbold"
-                android:text="제거하기"
-                android:background="@drawable/solid"/>
 
         </LinearLayout>
 

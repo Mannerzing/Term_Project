@@ -27,7 +27,7 @@ public class ScheduleAdd extends AppCompatActivity {
         setContentView(R.layout.activity_schedule_add);
 
         Button repeat = findViewById(R.id.R_day_button);
-        Button add_list_button = findViewById(R.id.add_list_but);;
+        Button add_list_button = findViewById(R.id.add_list_but);
         Button back_button = findViewById(R.id.cancel_but);
 
         S_Time = findViewById(R.id.Start_timepick);
@@ -72,6 +72,7 @@ public class ScheduleAdd extends AppCompatActivity {
 
                 add.putExtras(container);
                 setResult(54,add);
+
                 finish();
             }
         });
